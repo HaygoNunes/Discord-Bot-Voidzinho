@@ -32,8 +32,8 @@ O **Voidzinho** é um bot para Discord que utiliza inteligência artificial para
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/seuusuario/voidzinhodiscord.git
-   cd voidzinhodiscord
+   git clone https://github.com/HaygoNunes/Discord-Bot-Voidzinho
+   cd Discord-Bot-Voidzinho
    ```
 
 2. **Crie um ambiente virtual (opcional, mas recomendado)**:
@@ -109,5 +109,5 @@ Sinta-se à vontade para abrir **issues** e enviar **pull requests**!
 
 ---
 
-Feito com ❤️ por Haygo Nunes e a comunidade! 🚀
+Feito com ❤️ por Haygo Nunes ! 🚀
 
