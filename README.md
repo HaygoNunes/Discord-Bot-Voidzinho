@@ -107,7 +107,5 @@ Sinta-se à vontade para abrir **issues** e enviar **pull requests**!
 ### **Desenvolvedor Principal**
 - **Haygo Nunes** 🌟
 
----
 
-Feito por Haygo Nunes ! 🚀
 
