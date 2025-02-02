@@ -1,0 +1,51 @@
+# Workflow para rodar testes e lint em um aplicativo Python
+name: Python application
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do código
+      uses: actions/checkout@v4
+
+    - name: Configurar Python 3.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+
+    - name: Instalar dependências individualmente
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        pip install python-docx
+        pip install huggingface-hub==0.16.4
+        pip install langdetect==1.0.9
+        pip install pandas==2.1.1
+        pip install discord.py==2.3.2
+        pip install pdfplumber==0.10.3
+        pip install python-dotenv==1.0.0
+        pip install wikipedia-api==0.6.0
+        pip install requests==2.31.0
+        pip install zipfile36==0.1.3
+        pip install transformers==4.34.0
+
+    - name: Analisar código com Flake8
+      run: |
+        # Para erros críticos (falhar no build se houver problemas graves)
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # Para um relatório mais completo sem falhar o build
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+    - name: Executar testes com Pytest
+      run: |
+        pytest
