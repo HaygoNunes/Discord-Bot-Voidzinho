@@ -27,6 +27,14 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install flake8 pytest
+        pip install python-docx
+        pip install huggingface-hub
+        pip install langdetect
+        pip install pandas
+        pip install discord
+        pip install pdfplumber
+        pip install python-dotenv
+        pip install wikipedia-api
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
