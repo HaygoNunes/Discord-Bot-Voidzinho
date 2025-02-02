@@ -1,19 +1,16 @@
 import os
 import re
-import asyncio
 import tempfile
 import zipfile
 import discord
 import pdfplumber
 import wikipediaapi
+import sena
 from discord.ext import commands
 from dotenv import load_dotenv
 from langdetect import detect
-import discord
-import sena
 from collections import deque
 from huggingface_hub import InferenceClient
-<<<<<<< Updated upstream
 from docx import Document
 
 # Carregar variáveis de ambiente
@@ -35,16 +32,6 @@ MAX_HISTORY_LENGTH = 10
 conversation_history = deque(maxlen=MAX_HISTORY_LENGTH)  # Histórico de mensagens com tamanho limitado
 
 #### Funções Auxiliares ####
-=======
-import aiohttp
-import os
-
-# Configurações para o modelo LLaMA
-llama_client = InferenceClient(
-    "meta-llama/Meta-Llama-3-8B-Instruct",
-    token=os.getenv("HUGGINGFACE_TOKEN")  
-)
->>>>>>> Stashed changes
 
 def resposta_voidzinho(prompt, linguagem="texto"):
     """Gera uma resposta usando o cliente LLaMA com histórico de conversa."""
@@ -173,38 +160,7 @@ async def processar_anexo_codigo(message, attachment):
 
 intents = discord.Intents.default()
 intents.message_content = True
-<<<<<<< Updated upstream
 bot = commands.Bot(command_prefix="-", intents=intents)
-=======
-bot = commands.Bot(command_prefix="!", intents=intents)
-
-# Armazena o conteúdo dos arquivos carregados
-projetos = {}
-
-# Função para detectar a linguagem de programação
-def detectar_linguagem(input_usuario):
-    input_usuario = input_usuario.lower()
-    if "python" in input_usuario:
-        return "Python"
-    elif "html" in input_usuario:
-        return "HTML"
-    elif "css" in input_usuario:
-        return "CSS"
-    elif "javascript" in input_usuario or "js" in input_usuario:
-        return "JavaScript"
-    return "texto"
-
-# Função para formatar respostas com código
-def formatar_resposta_com_codigo(resposta, linguagem="texto"):
-    if linguagem.lower() in ["python", "html", "css", "javascript"]:
-        return f"```{linguagem.lower()}\n{resposta}\n```"
-    return resposta
-
-# Função para enviar mensagens longas em partes
-async def enviar_mensagem_em_partes(canal, mensagem):
-    for i in range(0, len(mensagem), 2000):
-        await canal.send(mensagem[i:i + 2000])
->>>>>>> Stashed changes
 
 @bot.event
 async def on_ready():
@@ -296,8 +252,6 @@ async def wiki(ctx, *, termo: str):
     except Exception as e:
         await ctx.send(f"Erro ao buscar na Wikipedia: {e}")
 
-<<<<<<< Updated upstream
-
 @bot.command(name="dev", help="Cria arquivos de código com base em uma descrição. Use: -dev [descrição]")
 async def dev(ctx, *, descricao: str):
     """Cria arquivos de código com base em uma descrição, gerando múltiplos arquivos se necessário."""
@@ -369,7 +323,6 @@ async def dev(ctx, *, descricao: str):
 
     except Exception as e:
         await ctx.send(f"❌ Erro ao gerar código: {e}")
-      
 
 @bot.command(name="ajuda", help="Mostra todos os comandos disponíveis do bot e como usá-los.")
 async def ajuda(ctx):
@@ -400,7 +353,3 @@ async def ajuda(ctx):
     await ctx.send(mensagem_ajuda)                    
 
 bot.run(KEY_DISCORD)
-=======
-# Conecte o bot ao servidor do Discord usando o token do bot
-bot.run(os.getenv("DISCORD_TOKEN"))
->>>>>>> Stashed changes
