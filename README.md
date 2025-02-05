@@ -1,20 +1,20 @@
 ```markdown
 # Voidzinho Discord Bot
 
-Voidzinho é um bot para Discord que utiliza inteligência artificial para gerar respostas, processar anexos (PDF, DOCX, código) e criar arquivos de código a partir de descrições. Ideal para desenvolvedores, estudantes e entusiastas, ele simplifica tarefas e enriquece a interação nos servidores.
+Voidzinho é um bot para Discord que utiliza inteligência artificial para gerar respostas, processar anexos (PDF, DOCX, código) e criar arquivos de código a partir de descrições. Destinado a desenvolvedores, estudantes e entusiastas, o bot simplifica tarefas e enriquece a interação nos servidores.
 
 ---
 
 ## Funcionalidades
 
-- **Geração de Respostas:** Responde perguntas e produz conteúdos com modelos de linguagem.
+- **Geração de Respostas:** Produz conteúdos e responde a perguntas utilizando modelos de linguagem avançados.
 - **Processamento de Anexos:**  
   - Extrai texto de arquivos PDF e DOCX.  
   - Explica o conteúdo de arquivos de código (JavaScript, Python, HTML, CSS, etc.).
-- **Criação de Arquivos de Código:** Gera arquivos (HTML, CSS, JS, Python) com base em descrições.
+- **Criação de Arquivos de Código:** Gera arquivos (HTML, CSS, JS, Python) com base em descrições fornecidas.
 - **Comandos Essenciais:**
-  - `-ajuda` – Exibe todos os comandos.
-  - `-limpar` – Remove mensagens do canal (use `-limpar all` para apagar todas).
+  - `-ajuda` – Exibe a lista de todos os comandos.
+  - `-limpar` – Remove mensagens do canal (use `-limpar all` para apagar todas as mensagens).
   - `-sorte` – Gera três jogos únicos da Mega Sena.
   - `-wiki` – Pesquisa informações na Wikipedia.
   - `-dev` – Cria arquivos de código a partir de uma descrição.
@@ -27,8 +27,8 @@ Voidzinho é um bot para Discord que utiliza inteligência artificial para gerar
 ### Requisitos
 
 - **Python 3.8+**
-- Conta no [Hugging Face](https://huggingface.co/) (para chave de API)
-- Conta no [Discord Developer Portal](https://discord.com/developers/applications) (para criar o bot)
+- Conta no [Hugging Face](https://huggingface.co/) (necessária para a chave de API)
+- Conta no [Discord Developer Portal](https://discord.com/developers/applications) (para criação do bot)
 
 ### Passo a Passo
 
@@ -62,7 +62,7 @@ Voidzinho é um bot para Discord que utiliza inteligência artificial para gerar
 
 4. **Configure as variáveis de ambiente:**
 
-   Crie um arquivo `.env` na raiz do projeto e adicione:
+   Crie um arquivo `.env` na raiz do projeto e adicione as seguintes linhas:
 
    ```env
    KEY_DISCORD=sua_chave_discord_aqui
@@ -80,14 +80,14 @@ Voidzinho é um bot para Discord que utiliza inteligência artificial para gerar
 
 ## Comandos
 
-| Comando   | Descrição                                                    |
-|-----------|--------------------------------------------------------------|
-| `-ajuda`  | Lista todos os comandos disponíveis.                         |
-| `-limpar` | Apaga mensagens do canal. Use `-limpar all` para apagar tudo.  |
-| `-sorte`  | Gera três jogos únicos da Mega Sena.                          |
-| `-dm`     | Inicia uma conversa privada com o bot.                       |
-| `-wiki`   | Pesquisa informações na Wikipedia.                           |
-| `-dev`    | Cria arquivos de código a partir de uma descrição.           |
+| Comando   | Descrição                                                      |
+|-----------|----------------------------------------------------------------|
+| `-ajuda`  | Lista todos os comandos disponíveis.                           |
+| `-limpar` | Apaga mensagens do canal. Use `-limpar all` para apagar todas.   |
+| `-sorte`  | Gera três jogos únicos da Mega Sena.                             |
+| `-dm`     | Inicia uma conversa privada com o bot.                          |
+| `-wiki`   | Pesquisa informações na Wikipedia.                              |
+| `-dev`    | Cria arquivos de código a partir de uma descrição.              |
 
 ---
 
@@ -109,7 +109,7 @@ Voidzinho é um bot para Discord que utiliza inteligência artificial para gerar
   Anexe um PDF no chat e o bot extrairá o texto para análise.
 
 - **Explicar um arquivo de código:**  
-  Anexe um arquivo de código (JavaScript, Python, etc.) e o bot fará uma explicação detalhada.
+  Anexe um arquivo de código (JavaScript, Python, etc.) e o bot fornecerá uma explicação detalhada.
 
 ---
 
@@ -121,7 +121,7 @@ Distribuído sob a [MIT License](LICENSE).
 
 ## Contribuição
 
-Sua colaboração é bem-vinda! Se encontrar algo a melhorar ou quiser adicionar novas funcionalidades, sinta-se à vontade para abrir issues e enviar pull requests.
+Contribuições são bem-vindas! Caso identifique melhorias ou deseje adicionar novas funcionalidades, sinta-se à vontade para abrir issues e enviar pull requests.
 
 ---
 
